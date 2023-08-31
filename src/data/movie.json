@@ -1,0 +1,29 @@
+[
+    {
+       "id": 0,
+       "title":"스파이더맨:어크로스 더 유니버스",
+       "img": "https://www.themoviedb.org/t/p/original/w9uVaOBZyX1Vgfu4AYpcMnSQ3Eu.jpg",
+       "detailImg": "https://www.themoviedb.org/t/p/original/e59QkHTueqRelzq0thn5deCEKIG.jpg"
+   },
+
+   {
+       "id": 1,
+       "title": "오펜하이머",
+       "img": "https://www.themoviedb.org/t/p/original/awcTzSXSeXAUtPWahPiq6Ufly4M.jpg",
+       "detailImg": "https://www.themoviedb.org/t/p/original/fm6KqXpk3M2HVveHwCrBSSBaO0V.jpg"
+   },
+
+   {
+       "id": 2,
+       "title": "엘리멘탈",
+       "img": "https://www.themoviedb.org/t/p/original/SdtlJiNMQVMUnT1B0RDpooKzWJ.jpg",
+       "detailImg": "https://www.themoviedb.org/t/p/original/pLNUaEOQNstCfgxBNaN7fu4z04U.jpg"
+   },
+  
+   {
+       "id": 3,
+       "title": "유포리아",
+       "img": "https://www.themoviedb.org/t/p/original/tyKPblwzfxfU2cLVS8VNEuEkt52.jpg",
+       "detailImg": "https://www.themoviedb.org/t/p/original/lcJ8S992xGr20KfNCbY4Fg3Xz6s.jpg"
+   }
+]
