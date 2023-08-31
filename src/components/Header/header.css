@@ -1,0 +1,54 @@
+#Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+#Header>div {
+    position: relative;
+    height: 89px;
+    font-size: 0;
+}
+
+.HeaderLogo {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-left: 110px;
+}
+
+.Header_Logo_link {
+    width: 130px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.HeaderNav {
+    height: 100%;
+    position: fixed;
+    width: 5vw;
+    width: 85px;
+}
+
+.HeaderNav>ul {
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    background-color: #1b1b1b;
+}
+
+.HeaderNav>ul>li>a {
+    font-size: 17px;
+    line-height: 90px;
+}
+
+.searchIcon {
+    border: none;
+    height: 90px;
+    font-size: large;
+    cursor: pointer;
+}
