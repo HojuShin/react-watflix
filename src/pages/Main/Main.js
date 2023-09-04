@@ -1,6 +1,7 @@
 import './main.css';
 import Header from '../../components/Header/Header.js';
 import movie from '../../data/movie.json';
+import Contents from './Contents/Contents.js';
 
 function Main() {
     return (
@@ -45,6 +46,7 @@ function Main() {
                         </ul>
                     </div>
                 </main>
+                <Contents/>
             </div>
         </>
     )
