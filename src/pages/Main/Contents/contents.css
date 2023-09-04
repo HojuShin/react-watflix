@@ -112,3 +112,29 @@
 .contentSection [id="slideMv03"]:checked~.slidewrap .control03 {
     display: block;
 }
+
+.movieInfoSection {
+    /* 부드럽게, 1초, 변한속도 느리게 */
+    transition: transform 1s ease;
+}
+
+/* 슬라이드업 구현 */
+@keyframes slideUp {
+
+    /* 시작상태 */
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    /* 최종상태(원래 위치로) */
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-animation {
+    /* slideUp 애니메이션 자연스럽게 적용 */
+    animation: slideUp 1s ease-in-out;
+}

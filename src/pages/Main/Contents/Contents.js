@@ -8,6 +8,26 @@ import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 function Contents() {
 
+    // 현재 스크롤 위치 상태 저장
+    const [scroll, setScroll] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            // scroll 상태 : 브라우저 현재 스크롤 위치 
+            // 브라우저가 window.pageYOffset 지원하지 않을 경우 document.documentElement.scrollTop 값 사용
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            setScroll(scrollTop);
+        };
+
+        // 컴포넌트 마운트 : 스크롤 이벤트 감지하여 handleScroll 함수 호출
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            // 컴포넌트 언마운트 : 스크롤 이벤트 제거
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     // 각 <li> 요소에 들어갈 영화 데이터 개수 (하나의 li 요소에 6개의 영화데이터 삽입)
     const itemNumber = 6;
     // <li>의 총 개수 (allMovie의 길이 / 6) = 3
@@ -31,7 +51,7 @@ function Contents() {
     });
 
     return (
-        <section className='movieInfoSection'>
+        <section className={`movieInfoSection ${scroll > 0 ? 'scroll-animation' : ''}`} >
             <div id="contents">
                 <p>오직 WATFLIX에서만</p>
                 <div className="contentSection">
