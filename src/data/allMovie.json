@@ -1,0 +1,225 @@
+[
+    {
+        "id": 0,
+        "title": "가디언즈 오브 갤럭시: Volume 3",
+        "img": "https://www.themoviedb.org/t/p/original/2LfL0flDTgwJgoEhO9NhDLeDTTK.jpg",
+        "detailImg": "https://www.themoviedb.org/t/p/original/5YZbUmjbMa3ClvSW1Wj3D6XGolb.jpg",
+        "genre": [
+            "SF",
+            "모험",
+            "액션"
+        ],
+        "story": "‘가모라’를 잃고 슬픔에 빠져 있던 ‘피터 퀼’이 위기에 처한 은하계와 동료를 지키기 위해 다시 한번 가디언즈 팀과 힘을 모으고, 성공하지 못할 경우 그들의 마지막이 될지도 모르는 미션에 나서는 이야기",
+        "released": 2023
+    },
+    {
+        "id": 1,
+        "title": "범죄도시 2",
+        "img": "https://www.themoviedb.org/t/p/original/wxNUnSzuMgsT8DFkZjX9GtfOKJX.jpg",
+        "detailImg": "https://www.themoviedb.org/t/p/original/euLUYGptrghbZssxBcr1lQDzZjd.jpg",
+        "genre": [
+            "액션",
+            "스릴러",
+            "범죄"
+        ],
+        "story": "가리봉동 소탕작전 후 4년 뒤, 금천서 강력반은 베트남으로 도주한 용의자를 인도받아 오라는 미션을 받는다. 괴물형사 ‘마석도’(마동석)와 ‘전일만’(최귀화) 반장은 현지 용의자에게서 수상함을 느끼고, 그의 뒤에 무자비한 악행을 벌이는 ‘강해상’(손석구)이 있음을 알게 된다. ‘마석도’와 금천서 강력반은 한국과 베트남을 오가며 역대급 범죄를 저지르는 ‘강해상’을 본격적으로 쫓기 시작하는데... 나쁜 놈들 잡는 데 국경 없다! 통쾌하고 화끈한 범죄 소탕 작전이 다시 펼쳐진다!",
+        "released": 2022
+    },
+    {
+        "id": 2,
+        "title": "미스 리틀 선샤인",
+        "img": "https://www.themoviedb.org/t/p/original/niNdhTpPHSgw22tK0PLjQMV640v.jpg",
+        "detailImg": "https://www.themoviedb.org/t/p/original/4YzGG8IPduUQRVnQ0vN5laHA1rH.jpg",
+        "genre": [
+            "코미디",
+            "드라마"
+        ],
+        "story": "또래 아이보다 통통한 몸매지만 유난히 미인대회에 집착하 올리브에게 캘리포니아 주에서 열리는 쟁쟁한 어린이 미인 대회인 미스 리틀 선샤인 대회 출전의 기회가 찾아온다. 그리고 딸아이의 소원을 위해 온 가족이 낡은 고물 버스를 타고 1박2일 동안의 무모한 여행 길에 오르게 된다. 좁은 버스 안에서 후버 가족의 비밀과 갈등은 점점 더 커져만 가는데... 할아버지와 올리브가 열심히 준비한 미스 리틀 선샤인 대회의 마지막 무대는 가족 모두를 그들이 절대 상상할 수 없었던 방식으로 변화시키게 된다. 과연 후버 가족에겐 무슨 일이 생긴 것일까?",
+        "released": 2006
+    },
+    {
+        "id": 3,
+        "title": "스즈메의 문단속",
+        "img": "https://www.themoviedb.org/t/p/original/5X8Ztkey1PHVRXijmmi2IK3tyTN.jpg",
+        "detailImg": "https://www.themoviedb.org/t/p/original/kbH4WaEMHl8r4mKECN1zpQlEXQr.jpg",
+        "genre": [
+            "애니메이션",
+            "판타지"
+        ],
+        "story": "큐슈의 작은 마을에서 살고 있는 소녀 ‘스즈메’는 어느 날, 여행을 하며 ‘문’을 찾고 있는 한 청년을 만난다. 그의 뒤를 쫓아간 소녀는 산속 폐허에서 덩그러니 남겨진 낡은 문을 발견한다. 무언가에 이끌린 듯 ‘스즈메’는 문으로 손을 뻗는데…",
+        "released": 2023
+    },
+    {
+        "id": 4,
+        "title": "굿 윌 헌팅",
+        "img": "https://www.themoviedb.org/t/p/original/lSrwa1FyUKn9cE0qOcPUOu9Y5J0.jpg",
+        "detailImg": "https://www.themoviedb.org/t/p/original/uzM4Rdr7aMQNdT8MqKY5Mic733N.jpg",
+        "genre": [
+            "드라마"
+        ],
+        "story": "수학, 법학, 역사학 등 모든 분야에 재능이 있는 ‘윌’(맷 데이먼)은 천재적인 두뇌를 가지고 있지만 어린 시절 받은 상처로 인해 세상에 마음을 열지 못하는 불우한 반항아. 절친인 ‘처키’(벤 애플렉)와 어울리던 ‘윌’의 재능을 알아본 MIT 수학과 ‘램보’ 교수는 대학 동기인 심리학 교수 ‘숀’(로빈 윌리엄스)에게 그를 부탁하게 되고 거칠기만 하던 ‘윌’은 ‘숀’과 함께 시간을 보낼수록 상처를 위로 받으며 조금씩 변화하기 시작하는데…",
+        "released": 1998
+    },
+    {
+        "id": 5,
+        "title": "토이 스토리 4",
+        "img": "https://www.themoviedb.org/t/p/original/6eTo4SAqsZ8xpGhdeYZYIByV64D.jpg",
+        "detailImg": "https://www.themoviedb.org/t/p/original/q62bpQ67qaXY0u6b2wFEnQYIbPd.jpg",
+        "genre": [
+            "애니메이션",
+            "코미디",
+            "판타지",
+            "모험"
+        ],
+        "story": "장난감의 운명을 거부하고 떠난 새 친구 ‘포키’를 찾기 위해 길 위에 나선 ‘우디’는 우연히 오랜 친구 ‘보핍’을 만나고 그녀를 통해 새로운 세상에 눈을 뜨게 된다. 한편, ‘버즈’와 친구들은 사라진 ‘우디’와 ‘포키’를 찾아 세상 밖 위험천만한 모험을 떠나게 되는데…",
+        "released": 2019
+    },
+    {
+        "id": 6,
+        "title": "아메리칸 스나이퍼",
+        "img": "https://www.themoviedb.org/t/p/original/i1U46OwMc6vlm7OoSUKfqUH615e.jpg",
+        "detailImg": "https://www.themoviedb.org/t/p/original/8y8Ey2XssEl8EYCgnaMaV0AQAUJ.jpg",
+        "story": "녹색 얼굴의 악마들, 전쟁의 종결자 네이비 실 사이에서도 전설이라 불렸던 남자 ‘크리스 카일’. 총알이 난무하는 전쟁터에서도 군인들이 적을 소탕할 수 있었던 것은 최고의 스나이퍼가 자신들을 지켜줄 것이라는 믿음 때문이었다. 그러나 신은 그에게 관용을 허락하지 않았다. 단 4일간의 허니문, 첫 아이가 태어나는 순간에도 전쟁터를 떠나지 못한다. 더 이상 자신이 사랑했던 남자가 아닌 것 같다는 아내의 눈물에도 그는 조국을 지키기 위해, 한 명의 전우를 더 살리기 위해 적에게 총구를 겨누는데…",
+        "genre": [
+            "전쟁",
+            "액션"
+        ],
+        "released": 2014
+    },
+    {
+        "id": 7,
+        "title": "듄",
+        "img": "https://www.themoviedb.org/t/p/original/cDbNAY0KM84cxXhmj8f0dLWza3t.jpg",
+        "detailImg": "https://www.themoviedb.org/t/p/original/jYEW5xZkZk2WTrdbMGAPFuBqbDc.jpg",
+        "genre": [
+            "모험",
+            "드라마",
+            "SF"
+        ],
+        "story": "10191년, 아트레이데스 가문의 후계자인 폴은 시간과 공간을 초월해 과거와 미래를 모두 볼 수 있고, 더 나은 미래를 만들 유일한 구원자인 예지된 자의 운명을 타고났다. 그리고 어떤 계시처럼 매일 꿈에서 아라키스의 행성에 있는 한 여인을 만난다. 귀족들이 지지하는 아트레이데스 가문에 대한 황제의 질투는 폴과 그 일족들을 죽음이 기다리는 아라키스로 이끄는데...",
+        "released": 2021
+    },
+    {
+        "id": 8,
+        "title": "주술회전",
+        "img": "https://www.themoviedb.org/t/p/original/pnn223i9v5kfYku6TbqdSbPePJp.jpg",
+        "detailImg": "https://www.themoviedb.org/t/p/original/fgPa2oJD8lbLaTanzlGDd32tqDE.jpg",
+        "genre": [
+            "애니메이션",
+            "판타지",
+            "액션"
+        ],
+        "story": "저주를 없애기 위해 저주가 된 소년의 되돌릴 수 없는 장렬한 이야기를 그린 애니메이션",
+        "released": 2020
+    },
+    {
+        "id": 9,
+        "title": "콜 미 바이 유어 네임",
+        "img": "https://www.themoviedb.org/t/p/original/mZ4gBdfkhP9tvLH1DO4m4HYtiyi.jpg",
+        "detailImg": "https://www.themoviedb.org/t/p/original/hrMbAi9fPTmc6EtpyyAgDKznptu.jpg",
+        "genre": [
+            "로맨스",
+            "드라마"
+        ],
+        "story": "17살 소년 엘리오의 가족은 매년 여름 손님을 받는다. 엘리오의 아버지 펄먼 교수의 일을 돕는 보조 연구원은 6주 동안 이곳에 머물며 사람들과 어울리고 자유로운 식사, 일광욕과 수영을 즐긴다. 올해 집을 찾은 24살 올리버는 모든 사람이 호감을 갖는 사람이다. 하지만 엘리오의 감정은 좀더 특별하다. 처음 보는 순간부터 그를 의식했고, 그 실체가 동성에게 품은 사랑임을 깨달은 후에는 적대감을 갖고 있는 것처럼 군다. 하지만 엘리오가 자신의 진짜 속내를 내비친 후 두 사람은 서로의 마음이 같다는 것을 알게 된다.",
+        "released": 2017
+    },
+    {
+        "id": 10,
+        "title": "작은 아씨들",
+        "img": "https://www.themoviedb.org/t/p/original/2kfDJEwZ7Rxo3yz5v6rJlwqtY0W.jpg",
+        "detailImg": "https://www.themoviedb.org/t/p/original/uuM2hTRJUg14VsieugxGaDyjWR8.jpg",
+        "genre": [
+            "드라마"
+        ],
+        "story": "배우가 되고 싶은 첫째 메그(엠마 왓슨) 작가가 되고 싶은 둘째 조(시얼샤 로넌) 음악가가 되고 싶은 셋째 베스(엘리자 스캔런) 화가가 되고 싶은 막내 에이미(플로렌스 퓨) 이웃집 소년 로리(티모시 샬라메)는 네 자매를 우연히 알게되고 각기 다른 개성의 네 자매들과 인연을 쌓아간다. 7년 후, 어른이 된 그들에겐 각기 다른 숙제가 놓이게 되는데…",
+        "released": 2020
+    },
+    {
+        "id": 11,
+        "title": "브레이킹 배드",
+        "img": "https://www.themoviedb.org/t/p/original/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
+        "detailImg": "https://www.themoviedb.org/t/p/original/wSztOsbdspDi0E6dWU1cxNmYDV9.jpg",
+        "genre": [
+            "범죄",
+            "스릴러",
+            "액션",
+            "드라마"
+        ],
+        "story": "한때 노벨화학상까지 바라 볼 정도로 뛰어난 과학자였던 고등학교 화학 교사 월터 화이트는 자신의 50세 생일 날에 폐암 3기 진단을 받는다. 어느 날 동서와 함께 마약 단속 현장을 참관한 그는 현장에서 달아나는 옛 제자 제시를 발견한다. 뇌성마비에 걸린 고등학생 아들과 임신한 아내를 위해 제시에게 동업을 제의한 월터는 자신의 화학지식을 이용해 전례없는 고순도 고품질의 메스암페타민을 제조한다.",
+        "released": 2008
+    },
+    {
+        "id": 12,
+        "title": "더 글로리",
+        "img": "https://www.themoviedb.org/t/p/original/m0cNGGKPVF3Yccx7iBQZUBQxuLJ.jpg",
+        "detailImg": "https://www.themoviedb.org/t/p/original/riU9xYchQwwDB3JdZbs5uutDnUM.jpg",
+        "genre": [
+            "드라마"
+        ],
+        "story": "고등학교 시절, 끔찍한 괴롭힘에 시달렸던 여자. 많은 시간이 흐른 후, 가해자들을 응징하기 위해 그녀가 치밀한 복수를 감행한다.",
+        "released": 2022
+    },
+    {
+        "id": 13,
+        "title": "너의 이름은.",
+        "img": "https://www.themoviedb.org/t/p/original/wx1Dxr4UyvN18SyC5GsVWWWtYja.jpg",
+        "detailImg": "https://www.themoviedb.org/t/p/original/3VIRYQTEC6pZSv3kUE5yPGVVg0i.jpg",
+        "genre": [
+            "로맨스",
+            "애니메이션",
+            "드라마"
+        ],
+        "story": "시골에 사는 소녀 미츠하(가미시라이시 모네)는 어느 날 잠에서 깬 후 자신의 몸이 남자로 바뀐 걸 알게 된다. 같은 시간, 도쿄에 사는 소년 타키(가미키 류노스케) 역시 이 기이한 상황을 겪고 있다. 낯선 가족, 낯선 친구들, 낯선 풍경들... 서로에게 이어진 끈을 알게 된 둘은 둘만의 규칙을 정하고 점차 상황을 받아들이기 시작한다. 서로에게 남긴 메모를 확인하며 점점 친구가 되어가는 타키와 미츠하. 언제부턴가 더 이상 몸이 바뀌지 않자 자신들이 특별하게 이어져있었음을 깨달은 타키는 미츠하를 만나러 가는데...",
+        "released": 2016
+    },
+    {
+        "id": 14,
+        "title": "그녀",
+        "img": "https://www.themoviedb.org/t/p/original/eCOtqtfvn7mxGl6nfmq4b1exJRc.jpg",
+        "detailImg": "https://www.themoviedb.org/t/p/original/sPPsR9f4K0movWVQ99u4uMqFzEL.jpg",
+        "genre": [
+            "로맨스",
+            "SF",
+            "드라마"
+        ],
+        "story": "테오도르는 다른 사람들의 편지를 대신 써주는 대필 작가로, 깊이 아꼈던 아내와 이혼 소송 중이다. 타인의 마음을 전해주는 일을 하고 있지만, 정작 테오도르 자신은 너무 외롭고 공허한 삶을 살고 있다. 그러던 어느 날, 스스로 생각하고 느끼는 인공 지능 운영체제인 사만다를 만나게 된다. 사만다는 따뜻한 목소리와 뛰어난 전산처리 능력을 통해 테오도르가 더 편안한 삶을 살 수 있도록 돕고, 테오도르는 자신의 육체를 통해 사만다가 더 많은 세계를 경험할 수 있도록 격려한다. 그렇게 둘은 직접적인 접촉보다 밀도 높은 정신적 교감을 나누는데...",
+        "released": 2013
+    },
+    {
+        "id": 15,
+        "title": "소울메이트",
+        "img": "https://www.themoviedb.org/t/p/original/vSdzWYiU5EmxxsQPUmBg6i20Xcd.jpg",
+        "detailImg": "https://www.themoviedb.org/t/p/original/eSSZgM4vMcA4XK2FPptLa9NFsAs.jpg",
+        "genre": [
+            "드라마",
+            "로맨스"
+        ],
+        "story": "1998년, 처음 만났다. 2004년, 첫사랑이 생겼다. 2010년, 각자 어른이 되어간다. 2014년, 흔적을 따라간다. 지금, 그리움을 그린다. 2023년 3월 15일, 당신의 소울메이트가 찾아옵니다.",
+        "released": 2023
+    },
+    {
+        "id": 16,
+        "title": "유포리아",
+        "img": "https://www.themoviedb.org/t/p/original/288q0JefZUuTfqUG2qzPTCZYuAL.jpg",
+        "detailImg": "https://www.themoviedb.org/t/p/original/lcJ8S992xGr20KfNCbY4Fg3Xz6s.jpg",
+        "genre": [
+            "하이틴",
+            "성장",
+            "드라마"
+        ],
+        "story": "약물과 성, 트라우마, 범죄 그리고 소셜 미디어가 가득한 세상 속에서 사랑과 우정 사이에서 갈등하는 10대 청소년들의 이야기",
+        "released": 2019
+    },
+    {
+        "id": 17,
+        "title": "아메리칸 셰프",
+        "img": "https://www.themoviedb.org/t/p/original/7G2Z1BcF4cMYqZMFja1IX3aBqGG.jpg",
+        "detailImg": "https://www.themoviedb.org/t/p/original/wV38GFBC9CbLGnXWIC1v94FJO7q.jpg",
+        "genre": [
+            "코미디"
+        ],
+        "story": "일류 레스토랑의 셰프 칼 캐스퍼는 레스토랑 오너에게 메뉴 결정권을 뺏긴 후 유명 음식 평론가의 혹평을 받자 홧김에 트위터로 욕설을 보낸다. 이들의 썰전은 온라인 핫이슈로 등극하고 칼은 레스토랑을 그만두기에 이른다. 아무것도 남지 않은 그는 쿠바 샌드위치 푸드트럭에 도전한다. 그 동안 일에 치여 소원했던 아들과 함께 미국 전역을 일주하며 온라인을 통해 입소문을 타기 시작하던 중, 문제의 평론가가 푸드트럭에 다시 찾아오는데... 과연 칼은 셰프로서의 명예를 되찾을 수 있을까?",
+        "released": 2015
+    }
+]
