@@ -1,4 +1,4 @@
-import { configureStore, createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 //reducer 정의
 const locker = createSlice({
@@ -27,9 +27,4 @@ const locker = createSlice({
 // action 내보내기
 export const { addLocker, deleteLocker } = locker.actions;
 
-//store 구성
-export default configureStore({
-  reducer: {
-    locker: locker.reducer
-  }
-})
+export default locker.reducer;
