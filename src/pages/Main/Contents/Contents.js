@@ -40,7 +40,7 @@ function Contents() {
         return (
             <li key={i}>
                 {movieList.map((movie, i) => (
-                    <Link to={'/contents/detail/' + movie.id} state={{ allMovie: movie }} key={movie.id}>
+                    <Link to={'/detail/' + movie.id} state={{ allMovie: movie }} key={movie.id}>
                         <div className="allMovie-data">
                             <img src={movie.img} alt={movie.title} />
                         </div>

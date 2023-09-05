@@ -6,13 +6,13 @@ import Mypgae from './pages/Mypage/Mypage.js';
 
 function App() {
   return (
-    <div className="App">
+    // <div className="App">
       <Routes>
         <Route path='/' element={<Main />}></Route>
-        <Route path='/detail' element={<Detail />}></Route>
+        <Route path='/detail/:id' element={<Detail />}></Route>
         <Route path='/mypage' element={<Mypgae />}></Route>
       </Routes>
-    </div>
+    // </div>
   );
 }
 
