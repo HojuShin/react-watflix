@@ -4,7 +4,7 @@ import Header from '../../components/Header/Header.js';
 import allMovie from '../../data/allMovie.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faCheck } from "@fortawesome/free-solid-svg-icons";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addLocker, deleteLocker } from '../../redux/store';
 
@@ -15,6 +15,19 @@ function Detail() {
     //현재 페이지 id 파라미터와 일치하는 영화 데이터 가져와서 matchId에 저장 
     const matchId = allMovie.find((movie) => { return movie.id == id });
 
+    // 최근본작품 기능 구현
+    useEffect(() => {
+        // 현재 페이지 localStorage 저장하기
+        // let으로 선언해야 값 읽기 및 변경 가능 
+        let recent = localStorage.getItem('watched');
+        recent = JSON.parse(recent); //object 형태로 전환
+        recent.push({id : matchId.id, title: matchId.title, detailImg:matchId.detailImg});
+         // 중복되는 객체 값 제거하기 -> Set으로 중복 제거된 recent를 다시 배열 형태로 저장 
+        recent = Array.from(new Set(recent.map(JSON.stringify))).map(JSON.parse);
+        // localStorage에 현재 페이지 영화 정보 저장
+        localStorage.setItem('watched', JSON.stringify(recent))
+    }, [])
+
     // redux store 가져오기 
     const state = useSelector((state) => state.locker);
     const dispatch = useDispatch();
@@ -22,6 +35,8 @@ function Detail() {
 
     // 보고싶어요 버튼 클릭 상태
     const [onclick, setOnClick] = useState(false);
+    //새로고침시 초기화되는거 리덕스로 ㄱ 
+    console.log(onclick)
 
     // 보고싶어요 버튼 클릭 동작 
     const handleClick = () => {
