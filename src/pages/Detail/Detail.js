@@ -21,8 +21,8 @@ function Detail() {
         // let으로 선언해야 값 읽기 및 변경 가능 
         let recent = localStorage.getItem('watched');
         recent = JSON.parse(recent); //object 형태로 전환
-        recent.push({id : matchId.id, title: matchId.title, detailImg:matchId.detailImg});
-         // 중복되는 객체 값 제거하기 -> Set으로 중복 제거된 recent를 다시 배열 형태로 저장 
+        recent.push({ id: matchId.id, title: matchId.title, detailImg: matchId.detailImg });
+        // 중복되는 객체 값 제거하기 -> Set으로 중복 제거된 recent를 다시 배열 형태로 저장 
         recent = Array.from(new Set(recent.map(JSON.stringify))).map(JSON.parse);
         // localStorage에 현재 페이지 영화 정보 저장
         localStorage.setItem('watched', JSON.stringify(recent))
@@ -33,10 +33,14 @@ function Detail() {
     const dispatch = useDispatch();
     console.log('리덕스', state);
 
-    // 보고싶어요 버튼 클릭 상태
+    // 보고싶어요 클릭 상태
     const [onclick, setOnClick] = useState(false);
-    //새로고침시 초기화되는거 리덕스로 ㄱ 
-    console.log(onclick)
+
+    useEffect(() => {
+        // state (보고싶어요)값 중 현재페이지 영화정보와 일치하는 값이 있는지 확인하여 onClick에 true 전달
+        const matchIdInLocker = state.some((movie) => movie.id === matchId.id);
+        setOnClick(matchIdInLocker);
+    }, [matchId, state]);
 
     // 보고싶어요 버튼 클릭 동작 
     const handleClick = () => {
@@ -45,11 +49,12 @@ function Detail() {
         // store에 이미 추가되었다면, 데이터를 store에서 삭제
         // 그렇지 않으면, 데이터를 store에 추가
         if (onclick) {
-            return dispatch(deleteLocker(matchId))
-        } else if (!onclick === true) {
-            return dispatch(addLocker(matchId))
+            dispatch(deleteLocker(matchId));
+        } else {
+            dispatch(addLocker(matchId));
         }
     };
+
 
     return (
         <>
