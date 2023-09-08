@@ -1,0 +1,34 @@
+#myPage {
+    width: 100%;
+    /* height: 100%; */
+    padding-left: 85px;
+    padding-top: 77px;
+    background-color: black;
+}
+
+.myPage_menu {
+    margin: 20px 0 20px 20px;
+}
+
+.myPage_menu button {
+    margin-right: 18px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 17px;
+    padding-bottom: 10px;
+}
+
+.historyContent {
+    color: #717171;
+    border: none;
+}
+
+.lockerContent {
+    font-weight: 800;
+    color: #eee;
+    border: 2px solid rgb(222, 42, 96);
+}
