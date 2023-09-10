@@ -78,3 +78,48 @@
 .srcollBar::-webkit-scrollbar-track {
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+/*  */
+
+#recentSearchHistory {
+    width: 100%;
+    border-top: 1px solid #2f2f2f;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.history {
+    color: #eee;
+    font-size: 18px;
+}
+
+.allDelete {
+    float: right;
+    cursor: pointer;
+    color: rgb(222, 42, 96);
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.text01 {
+    color: rgb(168, 168, 168);
+    font-size: 16px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.searchDelete {
+    flex-grow: 1;
+}
+
+.searchedDeleteIcon {
+    float: right;
+    padding: 10px;
+    transform: .1s;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.searchedDeleteIcon:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
