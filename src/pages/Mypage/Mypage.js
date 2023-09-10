@@ -2,6 +2,7 @@ import './mypage.css';
 import Header from '../../components/Header/Header.js';
 import { useState } from 'react';
 import Locker from './component/Locker.js';
+import History from './component/History.js';
 
 function Mypage() {
 
@@ -40,6 +41,7 @@ function Mypage() {
                     <button className='historyContent' onClick={() => sectionChange('history')}><p>최근본작품</p></button>
                 </div>
                 {clickCompenet === 'locker' && <Locker></Locker>}
+                {clickCompenet === 'history' && <History></History>}
             </div>
         </>
     )
