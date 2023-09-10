@@ -1,0 +1,123 @@
+
+.search {
+    padding: 100px 20px 0 0;
+}
+
+#search-Data {
+    display: block;
+    width: 100%;
+    height: 55px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 10px;
+    margin-bottom: 30px;
+    color: #eee;
+    font-size: 17px;
+    border-radius: 8px;
+}
+
+.searchResultTitle {
+    flex-grow: 1;
+}
+
+.searchResult {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transform: .3s;
+}
+
+.searchResult:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.searchResultImg {
+    width: 70px;
+    height: 100px;
+    margin-right: 30px;
+}
+
+.searchResultImg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.searchResult p {
+    color: #eee;
+    font-size: 18px;
+}
+
+.searchSectionHistory {
+    width: 100%;
+    height: 100vh;
+    padding-right: 10px;
+}
+
+.srcollBar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.srcollBar::-webkit-scrollbar-thumb {
+    height: 30%;
+    /* 길이 */
+    background: #a5a5a5;
+    /* 색상 */
+    border-radius: 10px;
+}
+
+.srcollBar::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#recentSearchHistory {
+    width: 100%;
+    border-top: 1px solid #2f2f2f;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.history {
+    color: #eee;
+    font-size: 18px;
+}
+
+.allDelete {
+    float: right;
+    cursor: pointer;
+    color: rgb(222, 42, 96);
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.text01 {
+    color: rgb(168, 168, 168);
+    font-size: 16px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.searchDelete {
+    flex-grow: 1;
+}
+
+.searchedDeleteIcon {
+    float: right;
+    padding: 10px;
+    transform: .1s;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.searchedDeleteIcon:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.srcollBar {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}

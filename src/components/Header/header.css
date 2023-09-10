@@ -51,4 +51,23 @@
     height: 90px;
     font-size: large;
     cursor: pointer;
+    background: #1b1b1b;
+}
+
+/* 검색창 토글 모션 */
+.searchSection {
+    position: fixed;
+    z-index: 9998;
+    width: 521px;
+    background-color: #1b1b1b;
+    height: 100%;
+    padding-left: 110px;
+    transition: transform 0.4s ease;
+    transform: translateX(-100%);
+    top: 0;
+    left: 0;
+}
+
+.searchSection.open {
+    transform: translateX(0%);
 }
