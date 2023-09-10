@@ -7,6 +7,7 @@ import { faPlus, faCheck } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addLocker, deleteLocker } from '../../redux/store';
+import Footer from '../../components/Footer/Footer.js';
 
 function Detail() {
     //현재 라우팅된 페이지의 url 파라미터 추출 
@@ -92,6 +93,7 @@ function Detail() {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </>
     )
 }

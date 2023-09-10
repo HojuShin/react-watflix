@@ -3,6 +3,7 @@ import Header from '../../components/Header/Header.js';
 import { useState } from 'react';
 import Locker from './component/Locker.js';
 import History from './component/History.js';
+import Footer from '../../components/Footer/Footer.js';
 
 function Mypage() {
 
@@ -43,6 +44,7 @@ function Mypage() {
                 {clickCompenet === 'locker' && <Locker></Locker>}
                 {clickCompenet === 'history' && <History></History>}
             </div>
+            <Footer></Footer>
         </>
     )
 }

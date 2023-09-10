@@ -2,6 +2,7 @@ import './main.css';
 import Header from '../../components/Header/Header.js';
 import movie from '../../data/movie.json';
 import Contents from './Contents/Contents.js';
+import Footer from '../../components/Footer/Footer.js';
 
 function Main() {
     return (
@@ -48,6 +49,7 @@ function Main() {
                 </main>
                 <Contents/>
             </div>
+            <Footer></Footer>
         </>
     )
 }
