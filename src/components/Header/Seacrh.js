@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './search.css';
 import allMovie from '../../data/allMovie.json';
 import { Link } from 'react-router-dom';
@@ -8,6 +8,8 @@ import { faX } from "@fortawesome/free-solid-svg-icons";
 function Search() {
     // 사용자 입력값
     const [userInput, setUserInput] = useState('');
+    // localStorage 값 
+    const [local, setLocal] = useState([]);
 
     // 입력값과 일치하는 영화 데이터값 추출 
     const filterMovie = allMovie.filter((movie) => {
@@ -30,8 +32,12 @@ function Search() {
     }
 
     // 검색내역 기능 - localStorage 불러오기
-    let localData = localStorage.getItem('searched');
-    localData = JSON.parse(localData);
+    useEffect(() => {
+        let localData = localStorage.getItem('searched')
+        localData = JSON.parse(localData);
+
+        setLocal(localData)
+    }, [])
 
     return (
         <>
@@ -47,7 +53,7 @@ function Search() {
                         {/* 1. 검색어 미입력시  */}
                         {userInput.length === 0 ? (
                             //  검색어 미입력 + 검색내역 없음 -> '검색내역 없음' 표시하기 
-                            localData.length === 0 ? (
+                            local.length === 0 ? (
                                 <p className="text01">검색 내역 없음</p>
                             ) : (
                                 // 검색어 미입력 + 검색내역 있음 -> 검색 내역 보여주기
@@ -56,7 +62,7 @@ function Search() {
                                         <span className="history">최근 검색한 콘텐츠</span>
                                         <span className="allDelete">모두 지우기</span>
                                     </div>
-                                    {localData.map((data, i) => (
+                                    {local.map((data, i) => (
                                         <Link key={i} to={`/detail/${data.id}`}>
                                             <div className="searchResult">
                                                 <div className="searchResultImg">
@@ -70,6 +76,9 @@ function Search() {
                                                         size="xs"
                                                         className="searchedDeleteIcon"
                                                         style={{ color: 'rgb(168, 168, 168)' }}
+                                                        onClick={(e) => {
+                                                            e.preventDefault(); //Link 페이지 이동 제한
+                                                        }}
                                                     />
                                                 </div>
                                             </div>
