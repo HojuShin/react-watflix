@@ -39,6 +39,33 @@ function Search() {
         setLocal(localData)
     }, [])
 
+    //검색내역 삭제 기능 - 부분 지우기 동작
+    const localDelete = (dataId) => {
+
+        let searched = localStorage.getItem('searched');
+        searched = JSON.parse(searched);
+
+        // dataId와 일치하는 데이터를 찾으면, 해당 데이터를 배열에서 제거
+        for (var i = 0; i < searched.length; i++) {
+            if (searched[i].id === dataId) {
+                searched.splice(i, 1)
+            }
+        }
+        searched = Array.from(new Set(searched.map(JSON.stringify))).map(JSON.parse);
+        localStorage.setItem('searched', JSON.stringify(searched));
+
+        return setLocal(searched) //ui 렌더링
+    }
+
+    // 검색내역 삭제 기능 - 모두 지우기 동작
+    const localAllDelete = () => {
+        const arr = []
+        if (localStorage.getItem('searched')) { //검색내역이 있으면 
+            localStorage.setItem('searched', JSON.stringify(arr)) //빈 배열을 Json 형식으로 저장 
+            return setLocal(arr) // ui 렌더링 
+        }
+    }
+
     return (
         <>
             <div className="search">
@@ -60,7 +87,7 @@ function Search() {
                                 <>
                                     <div id="recentSearchHistory">
                                         <span className="history">최근 검색한 콘텐츠</span>
-                                        <span className="allDelete">모두 지우기</span>
+                                        <span className="allDelete" onClick={() => { localAllDelete() }}>모두 지우기</span>
                                     </div>
                                     {local.map((data, i) => (
                                         <Link key={i} to={`/detail/${data.id}`}>
@@ -78,6 +105,7 @@ function Search() {
                                                         style={{ color: 'rgb(168, 168, 168)' }}
                                                         onClick={(e) => {
                                                             e.preventDefault(); //Link 페이지 이동 제한
+                                                            localDelete(data.id)
                                                         }}
                                                     />
                                                 </div>
