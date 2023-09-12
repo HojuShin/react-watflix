@@ -11,7 +11,18 @@ function Search() {
     // localStorage 값 
     const [local, setLocal] = useState([]);
 
-    // 입력값과 일치하는 영화 데이터값 추출 
+    // 공통함수 localStorage 데이터 가져오기
+    const getLocalData = () => {
+        const localData = localStorage.getItem('searched');
+        return JSON.parse(localData);
+    }
+
+    // 공통함수 localStorage 데이터 업데이트
+    const updateLocalData = (data) => {
+        localStorage.setItem('searched', JSON.stringify(data));
+    }
+
+    // 검색결과 기능 - 입력값과 일치하는 영화 데이터값 추출 
     const filterMovie = allMovie.filter((movie) => {
         //문자내 공백 제거 
         const movieWithoutSpaces = movie.title.replace(/\s/g, '');
@@ -23,27 +34,16 @@ function Search() {
 
     // 검색내역 기능 - 검색어 localStorage 저장 
     const saveSearchToLocalStorage = (movieId, movietitle, movieImg) => {
-        let recentSearched = localStorage.getItem('searched');
-        recentSearched = JSON.parse(recentSearched);
+        const recentSearched = getLocalData();
         recentSearched.push({ id: movieId, title: movietitle, img: movieImg });
 
-        recentSearched = Array.from(new Set(recentSearched.map(JSON.stringify))).map(JSON.parse);
-        localStorage.setItem('searched', JSON.stringify(recentSearched));
+        updateLocalData(recentSearched);
     }
-
-    // 검색내역 기능 - localStorage 불러오기
-    useEffect(() => {
-        let localData = localStorage.getItem('searched')
-        localData = JSON.parse(localData);
-
-        setLocal(localData)
-    }, [])
 
     //검색내역 삭제 기능 - 부분 지우기 동작
     const localDelete = (dataId) => {
 
-        let searched = localStorage.getItem('searched');
-        searched = JSON.parse(searched);
+        let searched = getLocalData();
 
         // dataId와 일치하는 데이터를 찾으면, 해당 데이터를 배열에서 제거
         for (var i = 0; i < searched.length; i++) {
@@ -51,8 +51,7 @@ function Search() {
                 searched.splice(i, 1)
             }
         }
-        searched = Array.from(new Set(searched.map(JSON.stringify))).map(JSON.parse);
-        localStorage.setItem('searched', JSON.stringify(searched));
+        updateLocalData(searched);
 
         return setLocal(searched) //ui 렌더링
     }
@@ -61,10 +60,17 @@ function Search() {
     const localAllDelete = () => {
         const arr = []
         if (localStorage.getItem('searched')) { //검색내역이 있으면 
-            localStorage.setItem('searched', JSON.stringify(arr)) //빈 배열을 Json 형식으로 저장 
+            updateLocalData(arr); //빈 배열을 Json 형식으로 저장 
             return setLocal(arr) // ui 렌더링 
         }
     }
+
+    // localStorage 불러오기
+    useEffect(() => {
+        const localData = getLocalData();
+
+        setLocal(localData)
+    }, [])
 
     return (
         <>
