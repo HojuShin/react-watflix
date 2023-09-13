@@ -12,7 +12,12 @@ function Locker() {
 
     return (
         <section className='mp_locker'>
-            {
+            {storeState.length === 0 ? (
+                <div className="noLockerSection">
+                    <svg width="350px" height="300px" stroke-width="1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#414141"><path d="M12 7v6M12 17.01l.01-.011M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="#414141" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    <p>보고싶은 작품이 여기에 보여져요 !</p>
+                </div>
+            ) :
                 storeState.map((e, i) => {
                     return (
                         <div className='mp_locker_li' key={i}>

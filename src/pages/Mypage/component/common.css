@@ -87,3 +87,19 @@
 .deletIcon:hover {
     color: rgb(222, 42, 96);
 }
+
+/*  */
+.noLockerSection {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2vw 0;
+}
+
+.noLockerSection p {
+    color: #717171;
+    padding-top: 30px;
+    font-size: 20px;
+}
