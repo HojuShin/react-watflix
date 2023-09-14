@@ -201,22 +201,22 @@ main {
 
 [id="slide01"]:checked~.slideList .slideItem {
     transform: translateX(0);
-    animation: slide01 20s infinite;
+    animation: slide01 18s infinite;
 }
 
 [id="slide02"]:checked~.slideList .slideItem {
     transform: translateX(-100%);
-    animation: slide02 20s infinite;
+    animation: slide02 18s infinite;
 }
 
 [id="slide03"]:checked~.slideList .slideItem {
     transform: translateX(-200%);
-    animation: slide03 20s infinite;
+    animation: slide03 18s infinite;
 }
 
 [id="slide04"]:checked~.slideList .slideItem {
     transform: translateX(-300%);
-    animation: slide04 20s infinite;
+    animation: slide04 18s infinite;
 }
 
 .backgroundSection::before {
@@ -236,4 +236,32 @@ main {
     transition: opacity 0.3s ease-in-out;
     /* 기본 이미지를 보이게 함 */
     opacity: 1;
+}
+
+/* 뷰포트 사이즈가 850px 미만일때 바뀔 이미지에 대한 스타일 */
+@media (max-width: 850px) {
+    .HeaderLogo {
+        justify-content: center;
+    }
+
+    main {
+        margin-left: 85px;
+    }
+
+    .backgroundSection::before {
+        display: none;
+    }
+
+    .slideList,
+    .slideItem,
+    .slideItem img {
+        width: 100%;
+        height: 100vh;
+        min-width: 422px;
+    }
+
+    .backgroundSection a img .new-image {
+        /* 기본 이미지를 숨김 */
+        opacity: 0;
+    }
 }
