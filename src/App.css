@@ -3,13 +3,18 @@
 html,
 body {
   font-family: 'Noto Sans KR', sans-serif;
+   background: #000; 
+   color: white;
+  height: 100%;
+  padding: 0;
+  margin: 0; 
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #1b1b1b;
+  /* background-color: #1b1b1b; */
 }
 
 h1,
@@ -30,9 +35,9 @@ ul {
   padding-left: 0px;
 }
 
-.App {
-  text-align: center;
-  height: 100%;
+#root {
+  /* height: 100vh; */
+  background-color: black;
 }
 
 /* 스크롤 디자인 설정 */

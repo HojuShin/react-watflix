@@ -49,3 +49,10 @@
     font-size: 14px;
     color: #717171;
 }
+
+@media (max-width: 850px) {
+    .footerSection {
+        margin-left: 85px;
+        padding: 0 20px;
+    }
+}

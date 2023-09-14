@@ -1,23 +1,24 @@
 #Header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: 9999;
 }
 
-#Header>div {
+/* #Header>div {
     position: relative;
     height: 89px;
     font-size: 0;
-}
+}  */
 
 .HeaderLogo {
     display: inline-flex;
     align-items: center;
-    height: 100%;
-    width: 100%;
     margin-left: 110px;
+    position: absolute;
+    z-index: 999;
+    height: 89px;
+    font-size: 0;
 }
 
 .Header_Logo_link {
@@ -70,4 +71,30 @@
 
 .searchSection.open {
     transform: translateX(0%);
+}
+
+@media (max-width: 850px) {
+    .Header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+    }
+
+    .HeaderLogo {
+        justify-content: center;
+        width: 100%;
+        padding-left: 85px;
+        margin-left: 0;
+    }
+
+    .searchSection {
+        width: 100%;
+        padding-left: 85px;
+    }
+
+    .search {
+        padding: 100px 20px 0 85px;
+    }
 }

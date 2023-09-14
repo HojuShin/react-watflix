@@ -1,3 +1,12 @@
+.searchHeaderLogo {
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    z-index: 999;
+    height: 89px;
+    font-size: 0;
+}
+
 .search {
     padding: 100px 20px 0 0;
 }
@@ -79,7 +88,6 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-/*  */
 
 #recentSearchHistory {
     width: 100%;
@@ -97,8 +105,13 @@
     float: right;
     cursor: pointer;
     color: rgb(222, 42, 96);
-    font-size: 18px;
+    font-size: 16px;
     margin-right: 10px;
+    transform: .1s;
+}
+
+.allDelete:hover {
+    color: #eee;
 }
 
 .text01 {
@@ -122,4 +135,11 @@
 
 .searchedDeleteIcon:hover {
     background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 850px) {
+    .searchHeaderLogo {
+        width: -webkit-fill-available;
+        justify-content: center;
+    }
 }

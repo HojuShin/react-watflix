@@ -4,6 +4,7 @@ import allMovie from '../../data/allMovie.json';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
+import Logo from '../../assets/logo.png';
 
 function Search() {
     // 사용자 입력값
@@ -74,7 +75,13 @@ function Search() {
 
     return (
         <>
+            <h1 className="searchHeaderLogo">
+                <Link to={'/'}>
+                    <img src={Logo} className='Header_Logo_link'></img>
+                </Link>
+            </h1>
             <div className="search">
+
                 <input
                     type="text"
                     placeholder="콘텐츠 검색"

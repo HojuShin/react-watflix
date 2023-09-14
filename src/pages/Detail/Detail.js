@@ -71,7 +71,7 @@ function Detail() {
                             {matchId.genre.map((genre, index) => (
                                 <span key={index}>{genre}</span>
                             ))}
-                            <span>｜ {matchId.released}</span>
+                            <p className='released'>｜ {matchId.released}</p>
                         </div>
                         <p className='movieStory'>{matchId.story}</p>
                         <div className="mvPlay">

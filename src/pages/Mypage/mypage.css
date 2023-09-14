@@ -7,7 +7,7 @@
 }
 
 .myPage_menu {
-    margin: 20px 0 20px 20px;
+    margin: 20px 0 0 20px;
 }
 
 .myPage_menu button {
@@ -31,4 +31,13 @@
     font-weight: 800;
     color: #eee;
     border: 2px solid #eee;
+}
+
+/* 뷰포트 사이즈가 2560px 이상일때  */
+@media (min-width: 2030px) {
+    #myPage  {
+        max-width: 1680px;
+        margin: 0 auto;
+        max-height: 1000px;
+    }
 }

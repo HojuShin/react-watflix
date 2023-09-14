@@ -43,6 +43,11 @@ function Header() {
 
     return (
         <>
+            <h1 className="HeaderLogo" >
+                <Link to={'/'}>
+                    <img src={Logo} className='Header_Logo_link'></img>
+                </Link>
+            </h1>
             <header id="Header">
                 <div>
                     <nav className='HeaderNav'>
@@ -65,11 +70,7 @@ function Header() {
                             </li>
                         </ul>
                     </nav>
-                    <h1 className="HeaderLogo">
-                        <Link to={'/'}>
-                            <img src={Logo} className='Header_Logo_link'></img>
-                        </Link>
-                    </h1>
+
                 </div>
             </header>
             {/* 검색 컴포넌트 */}
