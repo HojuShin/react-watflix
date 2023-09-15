@@ -35,10 +35,14 @@ function Search() {
 
     // 검색내역 기능 - 검색어 localStorage 저장 
     const saveSearchToLocalStorage = (movieId, movietitle, movieImg) => {
-        const recentSearched = getLocalData();
-        recentSearched.push({ id: movieId, title: movietitle, img: movieImg });
+      
+        const recentSearched = getLocalData() || []; // localStorage에서 데이터 가져오기, 없으면 빈 배열
 
+        // localStorage 데이터 업데이트
+        recentSearched.push({ id: movieId, title: movietitle, img: movieImg });
         updateLocalData(recentSearched);
+
+        return setLocal(recentSearched); // ui 렌더링
     }
 
     //검색내역 삭제 기능 - 부분 지우기 동작
@@ -66,11 +70,11 @@ function Search() {
         }
     }
 
-    // localStorage 불러오기
+    // localStorage에서 데이터 가져오기, 없으면 빈 배열
     useEffect(() => {
-        const localData = getLocalData();
+        const localData = getLocalData() || [] ; 
 
-        setLocal(localData)
+        setLocal(localData);
     }, [])
 
     return (
