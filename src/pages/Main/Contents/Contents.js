@@ -5,6 +5,7 @@ import allMovie from '../../../data/allMovie.json';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import Circular from "../Circular/Circular";
 
 function Contents() {
 
@@ -52,6 +53,7 @@ function Contents() {
 
     return (
         <section className={`movieInfoSection ${scroll > 0 ? 'scroll-animation' : ''}`} >
+            <Circular />
             <div id="contents">
                 <p>오직 WATFLIX에서만</p>
                 <div className="contentSection">
