@@ -20,6 +20,8 @@ function Search() {
 
     // 공통함수 localStorage 데이터 업데이트
     const updateLocalData = (data) => {
+        // 중복되는 객체 값 제거하기 -> Set으로 중복 제거된 data를 다시 배열 형태로 저장 
+        data = Array.from(new Set(data.map(JSON.stringify))).map(JSON.parse);
         localStorage.setItem('searched', JSON.stringify(data));
     }
 
