@@ -38,8 +38,9 @@ function Mypage() {
             <Header></Header>
             <div id='myPage'>
                 <div className='myPage_menu'>
-                <button className='lockerContent' onClick={() => sectionChange('locker')}><p>보고싶어요</p></button>
+                    <button className='lockerContent' onClick={() => sectionChange('locker')}><p>보관함</p></button>
                     <button className='historyContent' onClick={() => sectionChange('history')}><p>최근본작품</p></button>
+                    <hr className='contentBorder'></hr>
                 </div>
                 {clickCompenet === 'locker' && <Locker></Locker>}
                 {clickCompenet === 'history' && <History></History>}

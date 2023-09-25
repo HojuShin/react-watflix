@@ -1,18 +1,18 @@
-
 .mp_locker {
     display: flex;
     flex-wrap: wrap;
     padding-left: 25px;
     position: relative;
     z-index: 1;
-    margin-top: 20px;
+    margin-top: 50px;
+    height: 100%;
 }
 
 .mp_locker_li {
     position: relative;
     flex-basis: 30.33%;
     margin-right: 3%;
-    height: 240px;
+    height: 242px;
     margin-bottom: 50px;
     cursor: pointer;
 }
@@ -58,20 +58,26 @@
 .mp_movie_li_info {
     position: absolute;
     z-index: 4;
-    /* 아래배치 */
+    top: 0;
     right: 0px;
     bottom: 15px;
     left: 0px;
     width: 100%;
-    padding: 6px 20px;
+    height: 100%;
+    padding: 15px 15px 28px 15px;
     background-color: rgba(0, 0, 0, 0);
     display: flex;
     justify-content: space-between;
+    flex-direction: column-reverse;
 }
 
 .mp_movie_li_info p {
     color: #eee;
-    font-size: 23px;
+    font-size: 25px;
+}
+
+.mp_movie_li_info span {
+    color: #eee;
 }
 
 .mp_deletLocker {
@@ -82,10 +88,15 @@
 
 .deletIcon {
     color: #eee;
-    padding: 8px 0;
-}
+    padding: 8px 10px;
+    border-radius: 22px;
+    float: right;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: .1s;
+} 
 
 .deletIcon:hover {
+    background-color: rgba(0, 0, 0, 0.5);
     color: rgb(222, 42, 96);
 }
 
@@ -95,7 +106,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 66px 0;
+    height: 100%;
+    padding: 70px 0 90px 0;
 }
 
 .noLockerSection p {
@@ -103,7 +115,6 @@
     padding-top: 30px;
     font-size: 20px;
 }
-
 
 @media (max-width : 1340px) {
     .mp_movie_li_info {
@@ -150,19 +161,11 @@
         height: 150px;
         margin-bottom: 50px;
         cursor: pointer;
-        flex-basis : 0;
+        flex-basis: 0;
     }
 
     .mp_locker {
         flex-direction: column;
         display: block;
-    }
-}
-
-@media (min-width: 2030px) {
-    .myPage_menu {
-        text-align: center;
-        padding: 0 20px;
-        margin: 20px 0;
     }
 }

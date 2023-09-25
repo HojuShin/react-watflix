@@ -9,259 +9,145 @@ input {
 
 main {
     position: relative;
-    background-color: #232533;
     overflow: hidden;
-    height: 100vh;
     padding-top: 77px;
     margin-left: 85px;
 }
 
-/* 이미지 자동 슬라이드 */
-[name="slide"] {
-    display: none;
-}
-
-.backgroundSection {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    white-space: nowrap;
-    font-size: 0;
-    overflow: hidden;
-}
-
-.slideList,
-.slideItem,
-.slideItem img {
-    width: 100%;
+.background_main {
     height: 100%;
-    min-width: 1500px;
+    padding-top: 2vw;
+    margin-bottom: 3vw;
 }
 
-.backgroundSection .slideItem {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
+.background_mainSection {
+    display: flex;
+    justify-content: center;
+    padding-left: 25px;
+}
+
+.movieMain {
+    width: 50%;
+    margin-right: 20px;
+}
+
+.background_mainSection img {
     width: 100%;
-    transition: all .35s;
+    border-radius: 12px;
+    margin-top: 15px;
 }
 
-@keyframes slide01 {
-    0% {
-        left: 0%;
-    }
-
-    23% {
-        left: 0%;
-    }
-
-    25% {
-        left: -100%;
-    }
-
-    48% {
-        left: -100%;
-    }
-
-    50% {
-        left: -200%;
-    }
-
-    73% {
-        left: -200%;
-    }
-
-    75% {
-        left: -300%;
-    }
-
-    98% {
-        left: -300%;
-    }
-
-    100% {
-        left: 0%;
-    }
+.movieMainDesc {
+    font-size: 21px;
+    font-weight: 600;
+    display: inline;
 }
 
-@keyframes slide02 {
-    0% {
-        left: 0%;
-    }
-
-    23% {
-        left: 0%;
-    }
-
-    25% {
-        left: -100%;
-    }
-
-    48% {
-        left: -100%;
-    }
-
-    50% {
-        left: -200%;
-    }
-
-    73% {
-        left: -200%;
-    }
-
-    75% {
-        left: 100%;
-    }
-
-    98% {
-        left: 100%;
-    }
-
-    100% {
-        left: 0%;
-    }
+.movieTitle_main {
+    color: #717171;
+    margin-top: 6px;
+    font-weight: 600;
+    font-size: 18px;
+    display: block;
 }
 
-@keyframes slide03 {
-    0% {
-        left: 0%;
-    }
-
-    23% {
-        left: 0%;
-    }
-
-    25% {
-        left: -100%;
-    }
-
-    48% {
-        left: -100%;
-    }
-
-    50% {
-        left: 200%;
-    }
-
-    73% {
-        left: 200%;
-    }
-
-    75% {
-        left: 100%;
-    }
-
-    98% {
-        left: 100%;
-    }
-
-    100% {
-        left: 0%;
-    }
-}
-
-@keyframes slide04 {
-    0% {
-        left: 0%;
-    }
-
-    23% {
-        left: 0%;
-    }
-
-    25% {
-        left: 300%;
-    }
-
-    48% {
-        left: 300%;
-    }
-
-    50% {
-        left: 200%;
-    }
-
-    73% {
-        left: 200%;
-    }
-
-    75% {
-        left: 100%;
-    }
-
-    98% {
-        left: 100%;
-    }
-
-    100% {
-        left: 0%;
-    }
-}
-
-[id="slide01"]:checked~.slideList .slideItem {
-    transform: translateX(0);
-    animation: slide01 18s infinite;
-}
-
-[id="slide02"]:checked~.slideList .slideItem {
-    transform: translateX(-100%);
-    animation: slide02 18s infinite;
-}
-
-[id="slide03"]:checked~.slideList .slideItem {
-    transform: translateX(-200%);
-    animation: slide03 18s infinite;
-}
-
-[id="slide04"]:checked~.slideList .slideItem {
-    transform: translateX(-300%);
-    animation: slide04 18s infinite;
-}
-
-.backgroundSection::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url('https://www.wavve.com/img/detail_gra_bg.093ce6cc.png');
-    background-repeat: no-repeat;
+.promotion {
     width: 100%;
+    margin-top: 3vw;
+    padding-left: 25px;
+    padding-right: 20px;
+}
+
+.promotion_bar {
+    width: 100%;
+    height: 12vh;
+    background: rgb(222, 42, 96);
+    border-radius: 12px;
+}
+
+.promotion_bar_desc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100%;
-    z-index: 10;
-    content: "";
+    font-size: 15px;
+    font-weight: 500;
 }
 
-.backgroundSection a img {
-    max-width: 100%;
-    transition: opacity 0.3s ease-in-out;
-    /* 기본 이미지를 보이게 함 */
-    opacity: 1;
+.new,
+.hot {
+    display: inline;
+    font-size: 14px;
+    background: rgb(222, 42, 96);
+    color: #eee;
+    padding: 3px 8px;
+    border-radius: 2px;
+    font-weight: 600;
+    margin-left: 10px;
+    line-height: 14px;
+    text-align: center;
 }
 
-/* 뷰포트 사이즈가 850px 미만일때 바뀔 이미지에 대한 스타일 */
-@media (max-width: 850px) {
-    .HeaderLogo {
+.promotion_bar_desc span {
+    margin-top: 5px;
+}
+
+.promotion_bar_desc a {
+    margin-top: 12px;
+    text-decoration: revert;
+    color: #eee;
+}
+
+.genreSection {
+    margin-left: 8vw;
+    margin-right: 2vw;
+    margin-bottom: 100px;
+}
+
+.genreDesc {
+    color: #eee;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.genreList {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.genreRow {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.genreList p {
+    width: fit-content;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 30px;
+    border-radius: 12px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+@media (max-width: 900px) {
+    .background_mainSection {
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 
-    main {
-        margin-left: 85px;
-    }
-
-    .backgroundSection::before {
-        display: none;
-    }
-
-    .slideList,
-    .slideItem,
-    .slideItem img {
+    .movieMain {
         width: 100%;
-        height: 100vh;
-        min-width: 422px;
+        margin-bottom: 28px;
     }
 
-    .backgroundSection a img .new-image {
-        /* 기본 이미지를 숨김 */
-        opacity: 0;
+    .genreSection {
+        display: none;
     }
 }

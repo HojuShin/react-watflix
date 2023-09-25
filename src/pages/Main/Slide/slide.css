@@ -1,0 +1,206 @@
+input {
+    display: none;
+}
+
+/* 이미지 자동 슬라이드 */
+[name="slide"] {
+    display: none;
+}
+
+.backgroundSection {
+    white-space: nowrap;
+    font-size: 0;
+    overflow: hidden;
+    background: #000;
+    border-radius: 12px;
+}
+
+.backgroundSection .slideItem {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    transition: all .35s;
+    height: 100%;
+}
+
+@keyframes slide01 {
+    0% {
+        left: 0%;
+    }
+
+    23% {
+        left: 0%;
+    }
+
+    25% {
+        left: -100%;
+    }
+
+    48% {
+        left: -100%;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+    73% {
+        left: -200%;
+    }
+
+    75% {
+        left: -300%;
+    }
+
+    98% {
+        left: -300%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes slide02 {
+    0% {
+        left: 0%;
+    }
+
+    23% {
+        left: 0%;
+    }
+
+    25% {
+        left: -100%;
+    }
+
+    48% {
+        left: -100%;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+    73% {
+        left: -200%;
+    }
+
+    75% {
+        left: 100%;
+    }
+
+    98% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes slide03 {
+    0% {
+        left: 0%;
+    }
+
+    23% {
+        left: 0%;
+    }
+
+    25% {
+        left: -100%;
+    }
+
+    48% {
+        left: -100%;
+    }
+
+    50% {
+        left: 200%;
+    }
+
+    73% {
+        left: 200%;
+    }
+
+    75% {
+        left: 100%;
+    }
+
+    98% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes slide04 {
+    0% {
+        left: 0%;
+    }
+
+    23% {
+        left: 0%;
+    }
+
+    25% {
+        left: 300%;
+    }
+
+    48% {
+        left: 300%;
+    }
+
+    50% {
+        left: 200%;
+    }
+
+    73% {
+        left: 200%;
+    }
+
+    75% {
+        left: 100%;
+    }
+
+    98% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+[id="slide01"]:checked~.slideList .slideItem {
+    transform: translateX(0);
+    animation: slide01 14s infinite;
+}
+
+[id="slide02"]:checked~.slideList .slideItem {
+    transform: translateX(-100%);
+    animation: slide02 14s infinite;
+}
+
+[id="slide03"]:checked~.slideList .slideItem {
+    transform: translateX(-200%);
+    animation: slide03 14s infinite;
+}
+
+[id="slide04"]:checked~.slideList .slideItem {
+    transform: translateX(-300%);
+    animation: slide04 14s infinite;
+}
+
+
+.backgroundSection a img {
+    max-width: 100%;
+    transition: opacity 0.3s ease-in-out;
+    /* 기본 이미지를 보이게 함 */
+    opacity: 1;
+    border-radius: 12px;
+}
