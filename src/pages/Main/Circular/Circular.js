@@ -4,19 +4,15 @@ import { useEffect, useState } from 'react';
 function Circular() {
 
     const [txt, setTxt] = useState(['재구독', '만족도', '어쩌구'])
-    // 각 원형 프로그레스 바의 진행률 (0% 초기값 설정)
-    const [counters, setCounters] = useState([0, 0, 0]);
-    // 각 원형 프로그레스 바가 도달해야 하는 목표 진행률 
-    const [percent, setPercent] = useState([81, 90, 72]);
+    const [counters, setCounters] = useState([0, 0, 0]);  // 각 원형 프로그레스 바의 진행률 (0% 초기값 설정)
+    const [percent, setPercent] = useState([81, 90, 72]); // 각 원형 프로그레스 바가 도달해야 하는 목표 진행률 
 
-    //컴포넌트 렌더링, counters 혹은 percent 값 변경시 
     useEffect(() => {
         // percent 배열 순회하며 각 원형 프로그레스 바에 대한 타이머를 설정
         const timers = percent.map((e, i) => {
             return setInterval(() => {
                 if (counters[i] < e) {
-                    setCounters((prevCounters) => {
-                        // 이전 상태(prevCounters)를 기반으로 새로운 상태를 계산
+                    setCounters((prevCounters) => {  // 이전 상태(prevCounters)를 기반으로 새로운 상태를 계산
                         const newCounters = [...prevCounters];// 이전 상태를 복사
                         newCounters[i] += 1; // 새로운 상태를 계산
                         return newCounters; // 새로운 상태를 반환 
@@ -35,12 +31,10 @@ function Circular() {
 
         // 컴포넌트 언마운트 함수 (모든 타이머 중지) 
         return () => {
-            // timers 배열에 있는 각 타이머를 순회하면서 clearInterval(timer)를 호출하여 해당 타이머 중지 
             timers.forEach((timer) => {
                 clearInterval(timer);
             });
-            // 타이머 중지되어 애니메이션이 다시 시작될때 처음상태로 돌아감 
-            clearInterval(resetAnimation);
+            clearInterval(resetAnimation); // 타이머 중지되어 애니메이션이 다시 시작될때 처음상태로 돌아감 
         };
     }, [counters, percent]);
 
@@ -53,7 +47,7 @@ function Circular() {
     return (
         <>
             <div className='circular'>
-                <p className='circularDesc'>5000만이 시청하는 WATFLIX !</p>
+                <p className='circularDesc'><strong>5000만</strong>이 시청하는 WATFLIX !</p>
                 <div className='circularBx'>
                     {percent.map((e, index) => (
                         <div className="circle" key={index} style={circleStyles[index]}>

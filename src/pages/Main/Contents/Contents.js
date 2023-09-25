@@ -9,8 +9,7 @@ import Circular from "../Circular/Circular";
 
 function Contents() {
 
-    // 현재 스크롤 위치 상태 저장
-    const [scroll, setScroll] = useState(0);
+    const [scroll, setScroll] = useState(0);  // 현재 스크롤 위치 상태 저장
 
     useEffect(() => {
         const handleScroll = () => {
@@ -29,10 +28,8 @@ function Contents() {
         };
     }, []);
 
-    // 각 <li> 요소에 들어갈 영화 데이터 개수 (하나의 li 요소에 6개의 영화데이터 삽입)
-    const itemNumber = 6;
-    // <li>의 총 개수 (allMovie의 길이 / 6) = 3
-    const liNumber = Math.ceil(allMovie.length / itemNumber);
+    const itemNumber = 6; // 각 <li> 요소에 들어갈 영화 데이터 개수 (하나의 li 요소에 6개의 영화데이터 삽입)
+    const liNumber = Math.ceil(allMovie.length / itemNumber);  // <li>의 총 개수 (allMovie의 길이 / 6) = 3
 
     // jsx 변환
     const list = Array.from({ length: liNumber }).map((e, i) => { // list 배열 길이=3 (즉, i = 0,1,2)
