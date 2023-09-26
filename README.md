@@ -1,72 +1,73 @@
-# <span style="color:orange">원형 프로그레스 바 애니메이션 및 로직 설명</span> 
+![Alt text](image.png)
+<h1> 왓플릭스 </h1>
 
-```javascript
-    // 각 원형 프로그레스 바의 진행률 (0% 초기값 설정)
-    const [counters, setCounters] = useState([0, 0, 0]);
-    // 각 원형 프로그레스 바가 도달해야 하는 목표 진행률 
-    const [percent, setPercent] = useState([80, 90, 70]);
 
-    // 컴포넌트 렌더링, counters 혹은 percent 값 변경시 
-    useEffect(() => {
-        // percent 배열 순회하며 각 원형 프로그레스 바에 대한 타이머를 설정
-        const timers = percent.map((e, i) => {
-            return setInterval(() => {
-                if (counters[i] < e) {
-                    setCounters((prevCounters) => {
-                        // 이전 상태(prevCounters)를 기반으로 새로운 상태를 계산
-                        const newCounters = [...prevCounters];// 이전 상태를 복사
-                        newCounters[i] += 1; // 새로운 상태를 계산
-                        return newCounters; // 새로운 상태를 반환 
-                    });
-                }
-            }, 15);
-        });
+"Watcha"와 "Netflix"를 모델로 한 OTT(Over-The-Top) 서비스 웹 페이지입니다 😃  <br>
 
-       ......
-
-    }, [counters, percent]);
-```
+> 배포링크 : https://hojushin.github.io/react-watflix/
 <br>
 
-코드에서 ``counters[i]`` 가 ``percent[i]`` 의 값과 동일해질 때까지 1을 증가시키는 것이 목표임.<br> 이렇게 하면 각각의 원형 프로그레스 바가 자연스럽게 목표 진행률에 도달할 때까지 진행된다! 
-
-예시)
-
-- 초기 상태:
-  - ``counters`` 배열: [0, 0, 0] <br>
-  - ``percent`` 배열: [80, 90, 70]<br><br>
-
-- 첫 번째 타이머 실행:
-  - ``counters[0]`` 가 1로 증가: [1, 0, 0]<br><br>
-
-- 두 번째 타이머 실행:
-  - ``counters[0]`` 가 2로 증가: [2, 0, 0]<br>
-...
-<br>
+> Github 링크 : https://github.com/HojuShin/react-watflix
 <br>
 
-``counters[0]`` 가 __80과 같아지면 첫 번째 원형 프로그레스 바가 80%로 완료됨.__
+> 블로그 회고록 : https://velog.io/@tlsghwn/Watflix-%ED%9A%8C%EA%B3%A0%EB%A1%9D
 
-이런 식으로 ``counters[i]``가 ``percent[i]``의 값과 __동일해질 때까지 1씩 증가시켜서__ 각 원형 프로그레스 바가 목표 진행률에 도달된다! 이게 원형 프로그레스 바의 애니메이션을 담당하는 부분이다 
+<br>
+
+----
+<br>
+<p style="font-size: 28px;">🛠 Stack</p>
+
+<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"><br>
+<img src="https://img.shields.io/badge/JAVASCRIPT-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"><br>
+<img src="https://img.shields.io/badge/REDUX-764ABC?style=for-the-badge&logo=redux&logoColor=white"><br>
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"><br>
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"><br>
+<br>
 
 ---
 <br>
 
-```javascript
- useEffect(() => {
-      ......
+<p style="font-size: 28px;">💫 화면 이미지</p>
 
-        // 컴포넌트 언마운트 함수 (모든 타이머 중지) 
-        return () => {
-            // timers 배열에 있는 각 타이머를 순회하면서 clearInterval(timer)를 호출하여 해당 타이머 중지 
-            timers.forEach((timer) => {
-                clearInterval(timer);
-            });
-            // 타이머 중지되어 애니메이션이 다시 시작될때 처음상태로 돌아감 
-            clearInterval(resetAnimation); 
-        };
-    }, [counters, percent]);
-```
+<details>
+    <summary style="font-size: 19px;">메인 페이지</summary>
 
-``forEach`` 함수는 배열의 각 요소에 대해 주어진 콜백 함수를 실행.<br>
-``forEach`` 함수를 사용하여 배열의 모든 요소를 순회하고, 각각에 대해 clearInterval을 호출하여 타이머를 중지시킴! 
+![](https://velog.velcdn.com/images/tlsghwn/post/0dcccc43-e9f8-48bd-864d-ba7a36626ca0/image.gif)
+
+![](https://velog.velcdn.com/images/tlsghwn/post/2b8f2c8d-2939-49ba-9d07-d25fd2c47266/image.gif)
+
+</details>
+<br>
+
+
+<details>
+    <summary style="font-size: 19px;">검색창</summary>
+
+![](https://velog.velcdn.com/images/tlsghwn/post/edd9e63c-6275-4cc4-957e-132326f89ecf/image.gif)
+
+![](https://velog.velcdn.com/images/tlsghwn/post/fddac382-ff0c-460f-8cc0-7b73b9b0d1d5/image.gif)
+
+
+</details>
+<br>
+
+<details>
+    <summary style="font-size: 19px;">상세 페이지</summary>
+
+![](https://velog.velcdn.com/images/tlsghwn/post/8532f885-c3bf-45d4-bdee-24c4267b4e9d/image.gif)
+
+</details>
+
+<br>
+
+<details>
+    <summary style="font-size: 19px;">마이 페이지</summary>
+
+![](https://velog.velcdn.com/images/tlsghwn/post/3c139907-7b70-4158-9d4a-532cf6677d93/image.gif)
+
+![](https://velog.velcdn.com/images/tlsghwn/post/30231004-d83b-493a-99f0-ee0bc24e0993/image.gif)
+
+</details>
+
+
