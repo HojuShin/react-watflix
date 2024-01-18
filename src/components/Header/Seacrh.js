@@ -1,32 +1,47 @@
 import { useEffect, useState } from 'react';
 import './search.css';
-import allMovie from '../../data/allMovie.json';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import Logo from '../../assets/logo.png';
+import useMovieData from '../../utils/useData';
 
 function Search() {
+
     // 사용자 입력값
     const [userInput, setUserInput] = useState('');
+
     // localStorage 값 
     const [local, setLocal] = useState([]);
+
+    // movieData와 loading 상태 가져오기
+    const { movieData, loading } = useMovieData();
 
     // 공통함수 localStorage 데이터 가져오기
     const getLocalData = () => {
         const localData = localStorage.getItem('searched');
         return JSON.parse(localData);
     }
-
+   
     // 공통함수 localStorage 데이터 업데이트
     const updateLocalData = (data) => {
         // 중복되는 객체 값 제거하기 -> Set으로 중복 제거된 data를 다시 배열 형태로 저장 
         data = Array.from(new Set(data.map(JSON.stringify))).map(JSON.parse);
         localStorage.setItem('searched', JSON.stringify(data));
     }
+    // localStorage에서 데이터 가져오기, 없으면 빈 배열
+    useEffect(() => {
+        const localData = getLocalData() || [];
+
+        setLocal(localData);
+    }, [])
+
+    if (loading) {
+        return <p style={{color : '#717171'}}>Loading...</p>;
+    }
 
     // 검색결과 기능 - 입력값과 일치하는 영화 데이터값 추출 
-    const filterMovie = allMovie.filter((movie) => {
+    const filterMovie = movieData.filter((movie) => {
         //문자내 공백 제거 
         const movieWithoutSpaces = movie.title.replace(/\s/g, '');
         const userInputWithoutSpaces = userInput.replace(/\s/g, '');
@@ -35,13 +50,14 @@ function Search() {
         return movieWithoutSpaces.includes(userInputWithoutSpaces)
     })
 
+
     // 검색내역 기능 - 검색어 localStorage 저장 
-    const saveSearchToLocalStorage = (movieId, movietitle, movieImg) => {
-      
+    const saveSearchToLocalStorage = (localdata) => {
+
         const recentSearched = getLocalData() || []; // localStorage에서 데이터 가져오기, 없으면 빈 배열
 
         // localStorage 데이터 업데이트
-        recentSearched.push({ id: movieId, title: movietitle, img: movieImg });
+        recentSearched.push(localdata);
         updateLocalData(recentSearched);
 
         return setLocal(recentSearched); // ui 렌더링
@@ -72,22 +88,14 @@ function Search() {
         }
     }
 
-    // localStorage에서 데이터 가져오기, 없으면 빈 배열
-    useEffect(() => {
-        const localData = getLocalData() || [] ; 
-
-        setLocal(localData);
-    }, [])
-
     return (
         <>
             <h1 className="searchHeaderLogo">
                 <Link to={'/'}>
-                    <img src={Logo} className='Header_Logo_link'></img>
+                    <img src={Logo} className='Header_Logo_link' alt='logolink'></img>
                 </Link>
             </h1>
             <div className="search">
-
                 <input
                     type="text"
                     placeholder="콘텐츠 검색"
@@ -109,10 +117,10 @@ function Search() {
                                         <span className="allDelete" onClick={() => { localAllDelete() }}>모두 지우기</span>
                                     </div>
                                     {local.map((data, i) => (
-                                        <Link key={i} to={`/detail/${data.id}`}>
+                                         <Link to={`/detail/${data.id}`}  state={{ movieData: data }} key={i}>
                                             <div className="searchResult">
                                                 <div className="searchResultImg">
-                                                    <img src={data.img} alt={`Image ${i}`} />
+                                                    <img src={data.img} alt={`search ${i}`} />
                                                 </div>
                                                 <div className="searchResultTitle">
                                                     <p>{data.title}</p>
@@ -138,10 +146,10 @@ function Search() {
                                 {/* 2. 검색어 입력시 */}
                                 {/* 검색어와 일치하는 영화정보 보여주기 */}
                                 {filterMovie.map((data, i) => (
-                                    <Link key={i} to={`/detail/${data.id}`}>
-                                        <div className="searchResult" onClick={() => saveSearchToLocalStorage(data.id, data.title, data.img)}>
+                                    <Link to={`/detail/${data.id}`} state={{ movieData: data }} key={data.id}>
+                                        <div className="searchResult" onClick={() => saveSearchToLocalStorage(data)}>
                                             <div className="searchResultImg">
-                                                <img src={data.img} alt={`Image ${i}`} />
+                                                <img src={data.img} alt={`result${i}`} />
                                             </div>
                                             <div className="searchResultTitle">
                                                 <p>{data.title}</p>
