@@ -1,40 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import './contents.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
-import Circular from "../Circular/Circular";
 import useMovieData from "../../../utils/useData";
 
 function Contents() {
 
-    // 현재 스크롤 위치 상태 저장
-    const [scroll, setScroll] = useState(0);
-
     // movieData와 loading 상태 가져오기
     const { movieData, loading } = useMovieData();
 
-    useEffect(() => {
-        const handleScroll = () => {
-            // scroll 상태 : 브라우저 현재 스크롤 위치 
-            // 브라우저가 window.pageYOffset 지원하지 않을 경우 document.documentElement.scrollTop 값 사용
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            setScroll(scrollTop);
-        };
-
-        // 컴포넌트 마운트 : 스크롤 이벤트 감지하여 handleScroll 함수 호출
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            // 컴포넌트 언마운트 : 스크롤 이벤트 제거
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
     // 만약 데이터가 로딩 중이라면 로딩 메시지를 반환합니다.
     if (loading) {
-        return <p style={{color : '#717171'}}>Loading...</p>;
+        return <p style={{ color: '#717171' }}>Loading...</p>;
     }
 
     const itemNumber = 6; // 각 <li> 요소에 들어갈 영화 데이터 개수 (하나의 li 요소에 6개의 영화데이터 삽입)
@@ -58,40 +37,31 @@ function Contents() {
     });
 
     return (
-        <section className={`movieInfoSection ${scroll > 0 ? 'scroll-animation' : ''}`} >
-            <Circular />
-            <div id="contents">
-                <p>오직 <span className='watflixfont'>WATFLIX</span>에서만</p>
-                <div className="contentSection">
-                    <input type="radio" name="slide" id="slideMv01" defaultChecked={true} ></input>
-                    <input type="radio" name="slide" id="slideMv02" ></input>
-                    <div className="slidewrap">
-                        <div className="slide-control">
-                            <div className="control01">
-                                {/* <label htmlFor="slideMv02" className="left">
-                                    <FontAwesomeIcon icon={faChevronLeft} style={{ color: '#98989a' }} />
-                                </label> */}
-                                <label htmlFor="slideMv02" className="right">
-                                    <FontAwesomeIcon icon={faChevronRight} style={{ color: '#98989a' }} />
-                                </label>
-                            </div>
-                            <div className="control02">
-                                <label htmlFor="slideMv01" className="left">
-                                    <FontAwesomeIcon icon={faChevronLeft} style={{ color: '#98989a' }} />
-                                </label>
-                                {/* <label htmlFor="slideMv01" className="right">
-                                    <FontAwesomeIcon icon={faChevronRight} style={{ color: '#98989a' }} />
-                                </label> */}
-                            </div>
 
+        <div id="contents">
+            <p>오직 <span className='watflixfont'>WATFLIX</span>에서만</p>
+            <div className="contentSection">
+                <input type="radio" name="slide" id="slideMv01" defaultChecked={true} ></input>
+                <input type="radio" name="slide" id="slideMv02" ></input>
+                <div className="slidewrap">
+                    <div className="slide-control">
+                        <div className="control01">
+                            <label htmlFor="slideMv02" className="right">
+                                <FontAwesomeIcon icon={faChevronRight} style={{ color: '#98989a' }} />
+                            </label>
                         </div>
-                        <ul className="slidelist">
-                            {list}
-                        </ul>
+                        <div className="control02">
+                            <label htmlFor="slideMv01" className="left">
+                                <FontAwesomeIcon icon={faChevronLeft} style={{ color: '#98989a' }} />
+                            </label>
+                        </div>
                     </div>
+                    <ul className="slidelist">
+                        {list}
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
 

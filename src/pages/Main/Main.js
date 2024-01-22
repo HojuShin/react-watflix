@@ -1,15 +1,36 @@
 import './main.css';
 import Header from '../../components/Header/Header.js';
-import Contents from './Contents/Contents.js';
 import Footer from '../../components/Footer/Footer.js';
 import { useEffect, useState } from 'react';
-import Slide from './Slide/Slide.js';
 import { Link } from 'react-router-dom';
+import Slide from './Slide/Slide.js'
+import Circular from './Circular/Circular.js';
+import Contents from './Contents/Contents.js';
 
 function Main() {
 
     //현재 뷰포트 사이즈 상태값 저장
     const [viewportSize, setViewportSize] = useState(window.innerWidth);
+
+    // 현재 스크롤 위치 상태 저장
+    const [scroll, setScroll] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            // scroll 상태 : 브라우저 현재 스크롤 위치 
+            // 브라우저가 window.pageYOffset 지원하지 않을 경우 document.documentElement.scrollTop 값 사용
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            setScroll(scrollTop);
+        };
+
+        // 컴포넌트 마운트 : 스크롤 이벤트 감지하여 handleScroll 함수 호출
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            // 컴포넌트 언마운트 : 스크롤 이벤트 제거
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     useEffect(() => {
         //브라우저 창 너비를 가져와 setViewportSize 함수호출하여 상태값 업데이트 동작
@@ -23,9 +44,6 @@ function Main() {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    // 뷰포트 사이즈에 따라 이미지를 변경에 대한 조건부 설정
-    const showNewImage = viewportSize < 850;
-
     return (
         <>
             <div className='container'>
@@ -37,13 +55,14 @@ function Main() {
                                 <span className='movieMainDesc'>이주의 인기작</span>
                                 <p className='hot'>Hot</p>
                                 <span className='movieTitle_main'>오펜하이머</span>
-                                <img src='https://www.themoviedb.org/t/p/original/fm6KqXpk3M2HVveHwCrBSSBaO0V.jpg'></img>
+                                <img src='https://www.themoviedb.org/t/p/original/fm6KqXpk3M2HVveHwCrBSSBaO0V.jpg'
+                                    alt='minImg'></img>
                             </div>
                             <div className='movieMain'>
                                 <span className='movieMainDesc'>새로 올라온 콘텐츠</span>
                                 <p className='new'>New</p>
                                 <span className='movieTitle_main'>스파이더맨: 어크로스 더 유니버스, 이두나! 등</span>
-                                <Slide></Slide>
+                                <Slide />
                             </div>
                         </div>
                         <div className='promotion'>
@@ -57,25 +76,9 @@ function Main() {
                         </div>
                     </div>
                 </main>
-
-                <Contents />
-
-                <section className='genreSection'>
-                    <p className='genreDesc'>다양한 장르로 즐기세요</p>
-                    <div className='genreList'>
-                        <div className='genreRow'>
-                            <p>드라마</p>
-                            <p>SF</p>
-                            <p>코미디</p>
-                            <p>모험</p>
-                            <p>애니메이션</p>
-                        </div>
-                        <div className='genreRow'>
-                            <p>액션</p>
-                            <p>로맨스</p>
-                            <p>역사</p>
-                        </div>
-                    </div>
+                <section className={`movieInfoSection ${scroll > 0 ? 'scroll-animation' : ''}`} >
+                    <Circular />
+                    <Contents />
                 </section>
             </div>
             <Footer></Footer>
