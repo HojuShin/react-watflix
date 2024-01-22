@@ -1,6 +1,6 @@
 import './mypage.css';
 import Header from '../../components/Header/Header.js';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Locker from './component/Locker.js';
 import History from './component/History.js';
 import Footer from '../../components/Footer/Footer.js';
@@ -32,6 +32,12 @@ function Mypage() {
             likeButton.style.fontWeight = '500'
         }
     }
+
+    useEffect(() => {
+        // 페이지가 처음으로 마운트될 때 스크롤을 맨 위로 이동
+        window.scrollTo(0, 0);
+    }, []);
+
 
     return (
         <>

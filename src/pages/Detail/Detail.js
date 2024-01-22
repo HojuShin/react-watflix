@@ -15,7 +15,7 @@ function Detail() {
     const { id } = useParams();
     // movieData와 loading 상태 가져오기
     const { movieData, loading } = useMovieData();
-
+    
     // 현재 페이지 id 파라미터와 일치하는 영화 데이터 추출해서 저장
     const detailData = movieData.find((movie) => { return movie.id == id });
 
@@ -38,6 +38,11 @@ function Detail() {
     };
 
     useEffect(() => {
+        // 페이지가 처음으로 마운트될 때 스크롤을 맨 위로 이동
+        window.scrollTo(0, 0);
+    }, []);
+
+    useEffect(() => {
         // 현재 페이지 localStorage 저장하기
         if (detailData) {
             let recent = localStorage.getItem('watched') || '[]'; // 초기값이 없을 때 빈 배열로 설정
@@ -54,6 +59,7 @@ function Detail() {
             const detailDataInLocker = reduxstore.some((movie) => movie.id === detailData.id);
             setOnClick(detailDataInLocker);
         }
+
     }, [detailData, reduxstore]);
 
     return (
