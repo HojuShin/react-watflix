@@ -1,14 +1,32 @@
 {
   "files": {
-    "main.css": "/react-watflix/static/css/main.3907c129.css",
-    "main.js": "/react-watflix/static/js/main.d4403ef2.js",
+    "main.css": "/react-watflix/static/css/main.ab21cf52.css",
+    "main.js": "/react-watflix/static/js/main.167d2ae8.js",
+    "static/css/326.d90e4db9.chunk.css": "/react-watflix/static/css/326.d90e4db9.chunk.css",
+    "static/js/326.61246d6c.chunk.js": "/react-watflix/static/js/326.61246d6c.chunk.js",
+    "static/css/296.665e5969.chunk.css": "/react-watflix/static/css/296.665e5969.chunk.css",
+    "static/js/296.2491d0dc.chunk.js": "/react-watflix/static/js/296.2491d0dc.chunk.js",
+    "static/css/532.ae51c264.chunk.css": "/react-watflix/static/css/532.ae51c264.chunk.css",
+    "static/js/532.00c0f109.chunk.js": "/react-watflix/static/js/532.00c0f109.chunk.js",
+    "static/css/644.895986ee.chunk.css": "/react-watflix/static/css/644.895986ee.chunk.css",
+    "static/js/644.e76cd5c3.chunk.js": "/react-watflix/static/js/644.e76cd5c3.chunk.js",
+    "static/js/924.8656b2aa.chunk.js": "/react-watflix/static/js/924.8656b2aa.chunk.js",
     "static/media/logo.png": "/react-watflix/static/media/logo.e42e3395145394449b9c.png",
     "index.html": "/react-watflix/index.html",
-    "main.3907c129.css.map": "/react-watflix/static/css/main.3907c129.css.map",
-    "main.d4403ef2.js.map": "/react-watflix/static/js/main.d4403ef2.js.map"
+    "main.ab21cf52.css.map": "/react-watflix/static/css/main.ab21cf52.css.map",
+    "main.167d2ae8.js.map": "/react-watflix/static/js/main.167d2ae8.js.map",
+    "326.d90e4db9.chunk.css.map": "/react-watflix/static/css/326.d90e4db9.chunk.css.map",
+    "326.61246d6c.chunk.js.map": "/react-watflix/static/js/326.61246d6c.chunk.js.map",
+    "296.665e5969.chunk.css.map": "/react-watflix/static/css/296.665e5969.chunk.css.map",
+    "296.2491d0dc.chunk.js.map": "/react-watflix/static/js/296.2491d0dc.chunk.js.map",
+    "532.ae51c264.chunk.css.map": "/react-watflix/static/css/532.ae51c264.chunk.css.map",
+    "532.00c0f109.chunk.js.map": "/react-watflix/static/js/532.00c0f109.chunk.js.map",
+    "644.895986ee.chunk.css.map": "/react-watflix/static/css/644.895986ee.chunk.css.map",
+    "644.e76cd5c3.chunk.js.map": "/react-watflix/static/js/644.e76cd5c3.chunk.js.map",
+    "924.8656b2aa.chunk.js.map": "/react-watflix/static/js/924.8656b2aa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3907c129.css",
-    "static/js/main.d4403ef2.js"
+    "static/css/main.ab21cf52.css",
+    "static/js/main.167d2ae8.js"
   ]
 }
