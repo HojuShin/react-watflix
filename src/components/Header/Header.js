@@ -10,7 +10,6 @@ import Search from './Seacrh.js';
 function Header() {
 
     const location = useLocation();
-    console.log('현재경로', location.pathname); //현재 경로 확인
 
     // 현재 경로에 따른 버튼 컬러 변경 
     const iconColor = (path) => {
@@ -45,7 +44,7 @@ function Header() {
         <>
             <h1 className="HeaderLogo" >
                 <Link to={'/'}>
-                    <img src={Logo} className='Header_Logo_link'></img>
+                    <img src={Logo} className='Header_Logo_link' alt='headerlogo'></img>
                 </Link>
             </h1>
             <header id="Header">

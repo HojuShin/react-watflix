@@ -8,7 +8,7 @@ function Slide() {
 
     // 데이터 패칭
     useEffect(() => {
-        fetch('https://hojushin.github.io/data/main.json')
+        fetch('https://hojushin.github.io/data/main.json', { cache: 'force-cache' })
             .then(result => result.json())
             .then(result => setSlideMovie(result))
             .catch(error => {

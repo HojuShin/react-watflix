@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faX } from '@fortawesome/free-solid-svg-icons';
 import { deleteLocker } from '../../../redux/store';
-import storage from 'redux-persist/lib/storage';
 
 function Locker() {
 
@@ -28,7 +27,7 @@ function Locker() {
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center'
                                 }}>
-                                <Link to={'/detail/' + storeState[i].id}>
+                                <Link to={'/detail/' + storeState[i].id} >
                                     <div className='mp_movie'>
                                         <div className='mp_movie_li'>
                                             <div className='mp_movie_li_info'>

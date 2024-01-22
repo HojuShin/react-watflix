@@ -18,13 +18,14 @@
 }
 
 .mvInfo h1 {
+    font-family: 'VitroCore', sans-serif ;
     font-size: 50px;
     color: #eee;
     margin-bottom: 20px;
     display: inline;
 }
 
-.mvInfo span{
+.mvInfo span {
     color: rgba(255, 255, 255, 0.5);
     margin-right: 8px;
     display: inline;
@@ -48,12 +49,13 @@
     color: rgba(255, 255, 255, 0.5);
 }
 
-.movieStory{
+.movieStory {
     color: rgba(255, 255, 255, 0.5);
     width: 740px;
     margin-top: 25px;
     margin-bottom: 50px;
     font-size: 15px;
+    line-height: 1.5;
 }
 
 .mvPlay button {

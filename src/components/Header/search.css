@@ -78,16 +78,13 @@
 
 .srcollBar::-webkit-scrollbar-thumb {
     height: 30%;
-    /* 길이 */
     background: #a5a5a5;
-    /* 색상 */
     border-radius: 10px;
 }
 
 .srcollBar::-webkit-scrollbar-track {
     background-color: rgba(0, 0, 0, 0.5);
 }
-
 
 #recentSearchHistory {
     width: 100%;

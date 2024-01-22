@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 function Circular() {
 
-    const [txt, setTxt] = useState(['재구독', '만족도', '어쩌구'])
+    const txt = ['재구독', '만족도', '어쩌구'];
     const [counters, setCounters] = useState([0, 0, 0]);  // 각 원형 프로그레스 바의 진행률 (0% 초기값 설정)
     const [percent, setPercent] = useState([81, 90, 72]); // 각 원형 프로그레스 바가 도달해야 하는 목표 진행률 
 
@@ -47,7 +47,7 @@ function Circular() {
     return (
         <>
             <div className='circular'>
-                <p className='circularDesc'><strong>5000만</strong>이 시청하는 WATFLIX !</p>
+                <p className='circularDesc'>5000만이 시청하는 <span className='watflixfont'>WATFLIX</span></p>
                 <div className='circularBx'>
                     {percent.map((e, index) => (
                         <div className="circle" key={index} style={circleStyles[index]}>

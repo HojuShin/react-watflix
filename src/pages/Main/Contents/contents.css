@@ -7,6 +7,7 @@
     font-size: 26px;
     text-align: center;
     margin-left: 85px;
+    cursor: default;
 }
 
 .contentSection input[id*="slideMv"] {
@@ -25,8 +26,7 @@
     height: 46vh;
     min-height: 330px;
     margin: 40px 0;
-    white-space: nowrap;
-    /* 요소 줄바꿈 방지 */
+    white-space: nowrap; /* 요소 줄바꿈 방지 */
     font-size: 0;
 }
 
@@ -50,6 +50,7 @@
 
 .allMovie-data img {
     width: 100%;
+    height: auto;
     transition: transform 0.4s;
 }
 
@@ -102,10 +103,6 @@
     transform: translateX(-100%);
 }
 
-.contentSection [id="slideMv03"]:checked~.slidewrap .slidelist li {
-    transform: translateX(-200%);
-}
-
 /* 방향 아이콘 고정 */
 .contentSection .slide-control [class*="control"] {
     display: none;
@@ -119,9 +116,6 @@
     display: block;
 }
 
-.contentSection [id="slideMv03"]:checked~.slidewrap .control03 {
-    display: block;
-}
 
 .movieInfoSection {
     /* 부드럽게, 1초, 변한속도 느리게 */

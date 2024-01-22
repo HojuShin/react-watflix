@@ -1,11 +1,16 @@
 .circular {
     margin: 30px 0 80px 85px;
+    cursor: default;
 }
 
 .circularDesc {
     color: #eee;
     font-size: 26px;
     text-align: center;
+}
+
+.watflixfont{
+    font-family: 'VitroCore', sans-serif ;
 }
 
 .circularBx {

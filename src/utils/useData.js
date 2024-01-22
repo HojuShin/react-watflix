@@ -14,7 +14,7 @@ const useMovieData = () => {
         // 데이터 비동기적으로 가져오는 함수
         const fetchData = async () => {
             try {
-                const response = await fetch('https://hojushin.github.io/data/movies.json');
+                const response = await fetch('https://hojushin.github.io/data/movies.json', { cache: 'force-cache' });
                 const result = await response.json();
                 setMovieData(result);
                 setLoading(false);
