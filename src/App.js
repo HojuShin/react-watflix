@@ -1,11 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Main from './pages/Main/Main.js';
-import Detail from './pages/Detail/Detail.js'
-import Mypgae from './pages/Mypage/Mypage.js';
-import { useEffect } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
+import Loading from './Loading.js';
 
 function App() {
+
+  //레이지 로딩 적용 페이지
+  const Main = lazy(() => import('./pages/Main/Main.js'));
+  const Detail = lazy(() => import('./pages/Detail/Detail.js'));
+  const Mypage = lazy(() => import('./pages/Mypage/Mypage.js'));
 
   useEffect(() => {
     // 최근 본 작품 localStorage 저장
@@ -16,11 +19,13 @@ function App() {
   }, [])
 
   return (
-    <Routes>
-      <Route path='/' element={<Main />}></Route>
-      <Route path='/detail/:id' element={<Detail />}></Route>
-      <Route path='/mypage' element={<Mypgae />}></Route>
-    </Routes>
+    <Suspense fallback={<Loading />}>
+      <Routes>
+        <Route path='/' element={<Main />} />
+        <Route path='/detail/:id' element={<Detail />} />
+        <Route path='/mypage' element={<Mypage />} />
+      </Routes>
+    </Suspense>
   );
 }
 
